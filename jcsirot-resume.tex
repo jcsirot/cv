@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.80]{geometry}
+
+% personal data
+\name{Jean-Christophe}{Sirot}
+\title{Software Engineer at Docker}         % optional, remove / comment the line if not wanted
+\address{35, rue Bourgelat}{94700 Maisons-Alfort}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33~6~15~16~44~76}                  % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{jc@sirot.org}                               % optional, remove / comment the line if not wanted
+\social[twitter]{jcsirot}                          % optional, remove / comment the line if not wanted
+\social[linkedin]{jcsirot}                           % optional, remove / comment the line if not wanted
+\social[github]{jcsirot}                           % optional, remove / comment the line if not wanted
+
+\begin{document}
+
+\makecvtitle
+
+\section{Who I am}
+I am a software development engineer with 15 years of experience and a QA engineer in multiple fields (security, video, advertising). I love building softwares and sharing knowledge and best practices with the development teams to help them make better products.
+
+\section{Work Experience}
+
+\cventry{Oct 2017--Present}{Software Engineer}{Docker}{Paris}{}{%
+Software Quality Engineer on the Docker EE / Kubernetes integration
+}
+
+\cventry{Feb 2016--Sep 2017}{Lead Developer and Java Expert}{Weborama}{Paris}{}{%
+Lead developer on the BigSea project (socio demographic and behavioural profile factory).
+Technologies: Java, Apache Storm, Hadoop, Spark, AWS
+Main activities:
+\begin{itemize}%
+    \item Develop features, fix bugs and improve platform architecture
+    \item Spread development best practices, automate integration tests, improve coverage
+    \item Revamp CI/CD: new maven repository and docker registry, upgrade to CI/CD as code (use Jenkins pipelines and Jenkinsfiles).
+\end{itemize}%
+}
+
+\cventry{Nov 2014--Feb 2016}{Quality Assurance Manager}{Arkena}{Ivry-sur-Seine}{}{%
+Manager of the Arkena QA team: 4 engineers in Paris and 2 engineers Stockholm. I hired 3 of them.
+The team was in charge of:
+\begin{itemize}%
+    \item The validation of the product specifications and the deliverables (CDN, Cloud4Media products, Arkena Video Platform and OTT solutions). Setup of integration and end-to-end tests.
+    \item The continuous integration platform and the test automation. Tools: Jenkins, Mesos, Docker, Ansible
+    \item The setup and the management of the pre-production platforms
+\end{itemize}%
+}
+
+\cventry{Dec 2013--Nov 2014}{CDN Quality Assurance Engineer}{Arkena}{Ivry-sur-Seine}{}{%
+Design and setup of the Arkena CDN validation platform. Automation of the validation process:
+\begin{itemize}%
+    \item Installation of the QA platform (20+ hypervisors, multiple VLAN...) and services (Jenkins, Sonarqube, Artifactory, QA Complete)
+    \item Build the automatic deployment and validation of CDN components. A dedicated Jenkins plugin has been developed for this purpose
+    \item Develop testing tools (Video player simulator, automatic deployment scripts\ldots)
+\end{itemize}%
+CDN components validation:
+\begin{itemize}%
+    \item Write and execute test plans (feature tests, load tests, fuzzy tests)
+    \item Make proposals in order to improve quality of development
+\end{itemize}%
+}
+
+\cventry{Apr 2011--Dec 2013}{Build \& Quality Assurance Manager}{Cryptolog}{Paris}{}{%
+Lead of the quality assurance team.\newline{}%
+Build Management: management of the build environments (Windows / Linux / Mac OS X) and tools for all development teams.\newline{}%
+Quality Assurance: Development and software quality guides. Quality metrics analysis. Automated testing.\newline{}%
+}
+
+\cventry{Jan 2005--Apr 2011}{Project Manager}{Cryptolog}{Paris}{}{%
+Technical lead of digital signature product suite. Managing the development team (2-4 people).%
+}
+
+\cventry{Oct 2002--Jan 2005}{Security Software Engineer}{Cryptolog}{Paris}{}{%
+Development of libraries and servers applications in the field of digital signature and Public Key Infrastructure. Most develoment was made with Java and C.\newline{}%
+}
+
+\section{Extra activities}
+
+\cventry{May 2016-Today}{Co-Founder}{Association Cloud Native France (CNCF Paris)}{Paris}{}{%
+We created a non-profit organisation to promote Cloud Native concepts and the Cloud Native Computing Foundation (\url{https://cncf.io}). We organize one meetup per month \url{https://meetup.com/fr-FR/Cloud-Native-Computing-Paris/}%
+}
+
+\cventry{Devoxx France 2015}{Speaker}{De la cryptographie dans le navigateur avec WebCrypto API}{}{}{%
+\url{http://fr.slideshare.net/JeanChristopheSirot/web-cryptoapi-devoxxfr2015}
+}
+
+\cventry{Devoxx France 2016}{Speaker}{Hands on lab: Déployez vos applications sur un cluster Kubernetes avec Ansible}{}{}{}
+
+\cventry{Ansible meetup Apr 2016}{Speaker}{Ansible et Jenkins}{}{}{%
+\url{https://www.infoq.com/fr/presentations/ansible-jean-christophe-sirot-ansible-et-jenkins}
+}
+
+\cventry{Devoxx France 2017}{Speaker}{Tools in action: Raconte-moi X.509 : anatomie d'une autorité de certification}{}{}{}
+
+\cventry{Today}{Open source developer}{}{}{}{%
+\begin{itemize}%
+    \item \textit{Jenkins Ansible plugin} \url{https://wiki.jenkins-ci.org/display/JENKINS/Ansible+Plugin}
+    \item \textit{Jenkins Custom Job Icon plugin} \url{https://wiki.jenkins-ci.org/display/JENKINS/Custom+Job+Icon+Plugin}
+    \item \textit{digest.js} a cryptographic digest javascript library \url{https://github.com/jcsirot/digest.js}
+\end{itemize}%
+}
+
+\section{Education}
+
+\cventry{2001--2002}{M.Sc. in Electronic Commerce}{Dublin City University}{Dublin - Ireland}{}{Specializing in Cryptography. Jointly delivered by the DCU School of Computing and the DCU Business School}
+
+\cventry{1999--2002}{M.Sc. in Computer Science}{Telecom Nancy}{Nancy - France}{}{Specializing in software development}
+
+\section{Languages}
+\cvitemwithcomment{French}{Native}{}
+\cvitemwithcomment{English}{Full Professional Proficiency}{}
+\cvitemwithcomment{German}{Limited Working Proficiency}{}
+
+
+\section{Miscellaneous}
+
+\cvlistitem{Massive Open Online Courses participant (IT, Mathematics, Physics...)}
+\cvlistitem{Video game and board game player}
+
+\end{document}
