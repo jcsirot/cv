@@ -1,14 +1,25 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvtheme{banking}
-\moderncvcolor{green}
-
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.80]{geometry}
 \usepackage{makecell}
 
+%\makeatletter
+%\patchcmd{\makehead}{%search
+%    \setlength{\makeheaddetailswidth}{0.8\textwidth}%
+%    }{%replace
+%    \setlength{\makeheaddetailswidth}{\textwidth}%
+%  }{%success
+%  }{%failure
+%  }
+%\makeatother
+
+\moderncvtheme{banking}
+\moderncvcolor{green}
+
 % personal data
-\name{Jean-Christophe}{Sirot}
+\firstname{Jean-Christophe}
+\familyname{Sirot}
 \title{Staff Engineer}                   % optional, remove / comment the line if not wanted
 \address{35, rue Bourgelat}{94700 Maisons-Alfort}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+33~6~15~16~44~76}                  % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
@@ -68,7 +79,7 @@ Software Quality Engineer on the Docker EE / Kubernetes integration.
 \emph{Technologies: Docker, Kubernetes, Go, Jenkins, Ansible}
 }
 
-\vspace*{6mm}
+\vspace*{10mm}
 
 \subsection{Weborama, Paris}
 
