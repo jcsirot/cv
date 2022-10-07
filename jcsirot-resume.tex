@@ -1,19 +1,20 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{classic}
-\moderncvcolor{blue}
+\moderncvtheme{banking}
+\moderncvcolor{green}
 
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.80]{geometry}
+\usepackage{makecell}
 
 % personal data
 \name{Jean-Christophe}{Sirot}
-\title{Software Engineer at Docker}         % optional, remove / comment the line if not wanted
+\title{Staff Engineer}                   % optional, remove / comment the line if not wanted
 \address{35, rue Bourgelat}{94700 Maisons-Alfort}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+33~6~15~16~44~76}                  % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{jc@sirot.org}                               % optional, remove / comment the line if not wanted
 \social[twitter]{jcsirot}                          % optional, remove / comment the line if not wanted
-\social[linkedin]{jcsirot}                           % optional, remove / comment the line if not wanted
+\social[linkedin]{jcsirot}                         % optional, remove / comment the line if not wanted
 \social[github]{jcsirot}                           % optional, remove / comment the line if not wanted
 
 \begin{document}
@@ -21,88 +22,141 @@
 \makecvtitle
 
 \section{Who I am}
-I am a software development engineer with 15 years of experience and a QA engineer in multiple fields (security, video, advertising). I love building softwares and sharing knowledge and best practices with the development teams to help them make better products.
+I am a senior software development engineer with 20 years of experience in several domains (Digital signature and cryptography, Cloud Native). I love designing softwares, sharing knowledge and best practices with the development teams to help them build better products.
 
 \section{Work Experience}
 
-\cventry{Oct 2017--Present}{Software Engineer}{Docker}{Paris}{}{%
-Software Quality Engineer on the Docker EE / Kubernetes integration
+\subsection{Aircall, Paris}
+
+\cventry{Dec 2021--Today}{Staff Engineer}{}{}{}{%
+Creation of the Developer Productivity team at Aircall.
+\begin{itemize}%
+    \item Develop and promote internal tools along with best practices for the backend teams (AWS / Serverless micro-services / typescript)
+    \item Collaborate with the architecture team to define the reference architecture
+    \item Implement the reference architecture in sample / demo projects
+\end{itemize}
 }
 
-\cventry{Feb 2016--Sep 2017}{Lead Developer and Java Expert}{Weborama}{Paris}{}{%
-Lead developer on the BigSea project (socio demographic and behavioural profile factory).
-Technologies: Java, Apache Storm, Hadoop, Spark, AWS
-Main activities:
+\cventry{Mai 2020--Dec 2021}{Lead Software Engineer}{}{}{}{%
+Lead of the Authentication team. The team responsability was:
 \begin{itemize}%
-    \item Develop features, fix bugs and improve platform architecture
-    \item Spread development best practices, automate integration tests, improve coverage
-    \item Revamp CI/CD: new maven repository and docker registry, upgrade to CI/CD as code (use Jenkins pipelines and Jenkinsfiles).
+    \item Extract the authentication module from a Rails monolith, develop and deploy the new authentication stack
+    \item The seamless migration of the customer database
+\end{itemize}
+\textit{Technologies: AWS Cognito, AWS Lambda, Google Sign-In, SAML}
+}
+
+\vspace*{6mm}
+
+\subsection{Docker, Paris}
+
+\cventry{Jan 2019--Jan 2020}{Software Engineer}{}{}{}{%
+Software Engineer in the Developer Solution Group. The was in charge of the development and maintenance of
+\begin{itemize}%
+    \item \httplink[Docker App]{https://github.com/docker/app}, a packaging and deployment application for cloud native applications: develop new features, adapt to the CNAB standard (\url{https://cnab.io}).
+    \item \httplink[Docker Compose]{https://github.com/docker/compose}: ticket triage, fix bugs. I rewrote and fully automated the release process.
 \end{itemize}%
 }
 
-\cventry{Nov 2014--Feb 2016}{Quality Assurance Manager}{Arkena}{Ivry-sur-Seine}{}{%
-Manager of the Arkena QA team: 4 engineers in Paris and 2 engineers Stockholm. I hired 3 of them.
-The team was in charge of:
+\cventry{Oct 2017--Jan 2019}{Software Engineer}{}{}{}{%
+Software Quality Engineer on the Docker EE / Kubernetes integration.
 \begin{itemize}%
-    \item The validation of the product specifications and the deliverables (CDN, Cloud4Media products, Arkena Video Platform and OTT solutions). Setup of integration and end-to-end tests.
-    \item The continuous integration platform and the test automation. Tools: Jenkins, Mesos, Docker, Ansible
-    \item The setup and the management of the pre-production platforms
+    \item Create a test platform for the Docker Entreprise embedded Kubernetes (AWS, Azure, vSphere)
+    \item Automatic reporting of test results and failures with the development of an integration plugin for Testrail
+    \item Run the Kubernetes E2E test suite and write patchs when required
 \end{itemize}%
+\emph{Technologies: Docker, Kubernetes, Go, Jenkins, Ansible}
 }
 
-\cventry{Dec 2013--Nov 2014}{CDN Quality Assurance Engineer}{Arkena}{Ivry-sur-Seine}{}{%
-Design and setup of the Arkena CDN validation platform. Automation of the validation process:
-\begin{itemize}%
-    \item Installation of the QA platform (20+ hypervisors, multiple VLAN...) and services (Jenkins, Sonarqube, Artifactory, QA Complete)
-    \item Build the automatic deployment and validation of CDN components. A dedicated Jenkins plugin has been developed for this purpose
-    \item Develop testing tools (Video player simulator, automatic deployment scripts\ldots)
-\end{itemize}%
-CDN components validation:
-\begin{itemize}%
-    \item Write and execute test plans (feature tests, load tests, fuzzy tests)
-    \item Make proposals in order to improve quality of development
-\end{itemize}%
+\vspace*{6mm}
+
+\subsection{Weborama, Paris}
+
+\cventry{Feb 2016--Sep 2017}{Lead Developer and Java Expert}{}{}{}{%
+Lead developer of the BigSea team (sociologic/demographic and behavioural profile factory). I migrated the \textit{Proof of Concept} product from Apache Storm to a production-ready Kubernetes based application.%
+\emph{Technologies: Java, Hadoop, Spark, Kubernetes, AWS EC2}%
 }
 
-\cventry{Apr 2011--Dec 2013}{Build \& Quality Assurance Manager}{Cryptolog}{Paris}{}{%
-Lead of the quality assurance team.\newline{}%
-Build Management: management of the build environments (Windows / Linux / Mac OS X) and tools for all development teams.\newline{}%
-Quality Assurance: Development and software quality guides. Quality metrics analysis. Automated testing.\newline{}%
+\vspace*{6mm}
+
+\subsection{Arkena, Ivry-sur-Seine}
+
+\cventry{Nov 2014--Feb 2016}{Quality Assurance Manager}{}{}{}{%
+Manager of the Arkena QA team: 4 engineers in Paris and 2 engineers Stockholm. I hired 3 of them.%
 }
 
-\cventry{Jan 2005--Apr 2011}{Project Manager}{Cryptolog}{Paris}{}{%
-Technical lead of digital signature product suite. Managing the development team (2-4 people).%
+\cventry{Dec 2013--Nov 2014}{CDN Quality Assurance Engineer}{}{}{}{%
+Design and setup the new Arkena CDN validation platform. Automation of the CDN components validation process.%
+\emph{Technologies: Jenkins, Docker, Ansible, Sonarqube, Artifactory}%
 }
 
-\cventry{Oct 2002--Jan 2005}{Security Software Engineer}{Cryptolog}{Paris}{}{%
+\vspace*{6mm}
+
+\subsection{Universign, Paris}
+
+\cventry{Apr 2011--Dec 2013}{Build \& Quality Assurance Manager}{}{}{}{%
+Lead of the quality assurance team. Management of the build environments (Windows, Linux, OSX) and tools for the dev teams. Development of the software quality guides and quality metrics analysis.
+}
+
+\cventry{Jan 2005--Apr 2011}{Tech Lead}{}{}{}{%
+Technical lead of digital signature product suite. Manager of the development team (2-4 people).%
+}
+
+\cventry{Oct 2002--Jan 2005}{Software Engineer}{}{}{}{%
 Development of libraries and servers applications in the field of digital signature and Public Key Infrastructure. Most develoment was made with Java and C.\newline{}%
 }
 
 \section{Extra activities}
 
-\cventry{May 2016-Today}{Co-Founder}{Association Cloud Native France (CNCF Paris)}{Paris}{}{%
-We created a non-profit organisation to promote Cloud Native concepts and the Cloud Native Computing Foundation (\url{https://cncf.io}). We organize one meetup per month \url{https://meetup.com/fr-FR/Cloud-Native-Computing-Paris/}%
+\cventry{2020-Today}{Event Organizer}{Kubernetes Community Days France 2023}{}{}{%
+We are a team of volonteers organising the Kubernetes Community Days France event in March 2023, a community event around Devops
+and Cloud Native technologies.\newline{}%
+\url{https://kcdfrance.fr}%
 }
 
-\cventry{Devoxx France 2015}{Speaker}{De la cryptographie dans le navigateur avec WebCrypto API}{}{}{%
-\url{http://fr.slideshare.net/JeanChristopheSirot/web-cryptoapi-devoxxfr2015}
+\cventry{2016-Today}{Co-Founder}{Association Cloud Native Computing Paris (CNCF Paris)}{}{}{%
+We created a non-profit organisation to promote Cloud Native concepts and the \httplink[Cloud Native Computing Foundation]{https://cncf.io}.\newline{}%
+\url{https://meetup.com/fr-FR/Cloud-Native-Computing-Paris/}%
 }
 
-\cventry{Devoxx France 2016}{Speaker}{Hands on lab: Déployez vos applications sur un cluster Kubernetes avec Ansible}{}{}{}
+\cventry{2015-Today}{Co-Founder}{Paris Java User Group}{}{}{%
+Member of the team organizing meetups every month \url{https://www.parisjug.org/}%
+}
+
+\section{Speaker experience}
+
+\cventry{Devoxx France 2022}{Speaker}{Conference: La Cryptanalyse d'Enigma : entre espionnage et mathématiques}{}{}{%
+\begin{itemize}%
+    \item \emph{Slides} \url{https://bit.ly/3CjArC2}
+    \item \emph{Video} \url{https://youtu.be/TnxPRKPpEoA}
+\end{itemize}
+}
+
+\cventry{Devoxx France 2019}{Speaker}{Université: Cycle de vie des applications dans Kubernetes}{}{}{%
+\emph{Video} \url{https://youtu.be/-PrLE3FD6mw}%
+}
+
+\cventry{Devoxx France 2018 / Devoxx Maroc 2018}{Speaker}{Tools in Action: Java dans Docker Bonnes pratiques}{}{}{%
+\begin{itemize}%
+    \item \emph{Slides} \url{https://fr.slideshare.net/kanedafromparis/java-indocker-devoxxfr-2018}
+    \item \emph{Video} \url{https://youtu.be/vzpU2jxrxJ8}
+\end{itemize}
+}
 
 \cventry{Ansible meetup Apr 2016}{Speaker}{Ansible et Jenkins}{}{}{%
-\url{https://www.infoq.com/fr/presentations/ansible-jean-christophe-sirot-ansible-et-jenkins}
+\emph{Video} \url{https://bit.ly/3CfjOaW}
 }
 
-\cventry{Devoxx France 2017}{Speaker}{Tools in action: Raconte-moi X.509 : anatomie d'une autorité de certification}{}{}{}
-
-\cventry{Today}{Open source developer}{}{}{}{%
-\begin{itemize}%
-    \item \textit{Jenkins Ansible plugin} \url{https://wiki.jenkins-ci.org/display/JENKINS/Ansible+Plugin}
-    \item \textit{Jenkins Custom Job Icon plugin} \url{https://wiki.jenkins-ci.org/display/JENKINS/Custom+Job+Icon+Plugin}
-    \item \textit{digest.js} a cryptographic digest javascript library \url{https://github.com/jcsirot/digest.js}
-\end{itemize}%
+\cventry{Devoxx France 2015}{Speaker}{Lighting Talk: De la cryptographie dans le navigateur avec WebCrypto API}{}{}{%
+\emph{Slides} \url{http://fr.slideshare.net/JeanChristopheSirot/web-cryptoapi-devoxxfr2015}
 }
+
+\section{Open source contributions}
+
+\cvitemwithcomment{anki-simple-furigana}{\makecell[tl]{an Anki Add-On for students learning Japanese \\ \url{https://ankiweb.net/shared/info/1444055400}}}{}
+\cvitemwithcomment{go-polly-tts}{\makecell[tl]{a simple Japanese Text-to-speech generator using AWS Polly \\ \url{https://github.com/jcsirot/go-polly-tts}}}{}
+\cvitemwithcomment{Jenkins Ansible plugin}{\url{https://wiki.jenkins-ci.org/display/JENKINS/Ansible+Plugin}}{}
+    %\item \textit{digest.js} a cryptographic digest javascript library \url{https://github.com/jcsirot/digest.js}{}
 
 \section{Education}
 
@@ -114,11 +168,11 @@ We created a non-profit organisation to promote Cloud Native concepts and the Cl
 \cvitemwithcomment{French}{Native}{}
 \cvitemwithcomment{English}{Full Professional Proficiency}{}
 \cvitemwithcomment{German}{Limited Working Proficiency}{}
-
+\cvitemwithcomment{Japanese}{Beginner (JLPT N4 level)}{}
 
 \section{Miscellaneous}
 
-\cvlistitem{Massive Open Online Courses participant (IT, Mathematics, Physics...)}
-\cvlistitem{Video game and board game player}
+\cvlistitem{Learning Japanese at INALCO}
+\cvlistitem{Playing Video games and board games}
 
 \end{document}
