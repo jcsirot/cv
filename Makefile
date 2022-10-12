@@ -8,10 +8,10 @@ DOCKER = docker
 all: $(DOCS)
 
 clean:
-	rm -rf *.aux *.out *.log *.pdf
+	rm -rf *.aux *.out *.log *.pdf build/
 
 image:
 	docker build -t jcsirot/latex .
 
 %.pdf: %.tex
-	$(DOCKER) run --rm -ti -v $(PWD):/src -e DOCUMENT=$< jcsirot/latex
+	$(DOCKER) run --rm -ti -v $(PWD):/src -e BUILD_DIR=build -e DOCUMENT=$< jcsirot/latex
